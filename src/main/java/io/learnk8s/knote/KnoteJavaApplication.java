@@ -109,6 +109,12 @@ class KNoteController {
         return "index";
     }
 
+    @GetMapping("/note")
+    public String index(Model model) {
+        getAllNotes(model);
+        return "index";
+    }
+
     @PostMapping("/note")
     public String saveNotes(@RequestParam("image") MultipartFile file,
                             @RequestParam String description,
