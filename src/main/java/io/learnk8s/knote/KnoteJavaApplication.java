@@ -110,7 +110,7 @@ class KNoteController {
     }
 
     @GetMapping("/note")
-    public String index(Model model) {
+    public String getNotes(Model model) {
         getAllNotes(model);
         return "index";
     }
